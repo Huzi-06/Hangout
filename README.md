@@ -163,9 +163,6 @@ npm run start    # Start production server
 5. Push to the branch: `git push origin feature/amazing-feature`
 6. Open a Pull Request
 
-## 📝 License
-
-This project is licensed under the ISC License.
 
 ## 🆘 Support
 
@@ -186,4 +183,3 @@ The project uses Socket.IO for real-time communication and includes features lik
 
 ---
 
-**Made with ❤️ using React, TypeScript, and Socket.IO**
