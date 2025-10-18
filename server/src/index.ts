@@ -23,8 +23,8 @@ io.on("connection", (socket) => {
 
     socket.on("join", (username: string) => {
         users.set(socket.id, { id: socket.id, username: username });
-        socket.emit("userList", Array.from(users.values())) // Broadcast to ALL clients
-        socket.emit("userJoined", username); // Broadcast to ALL clients
+        io.emit("userList", Array.from(users.values())) // Broadcast to ALL clients
+        io.emit("userJoined", username); // Broadcast to ALL clients
         socket.emit("messageHistory", messages) // Send to just this socket
     })
 
