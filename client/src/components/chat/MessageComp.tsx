@@ -88,7 +88,7 @@ const MessageComp = ({
                                 <BsDownload className="h-4 w-4" />
                             </button>
                         </div>
-                        {message && <p className={`text-sm leading-relaxed ${isDarkMode ? 'text-gray-200' : 'text-gray-700'}`}>{message}</p>}
+                        {message && <p className={`text-sm leading-relaxed ${isDarkMode ? 'text-white' : 'text-gray-700'}`}>{message}</p>}
                     </div>
                 )
 
@@ -149,12 +149,12 @@ const MessageComp = ({
                             )}
                         </div>
                         {/* Only show message text if it's not an emoji sticker (to avoid duplication) */}
-                        {!isEmojiSticker && message && <p className={`text-sm leading-relaxed ${isDarkMode ? 'text-gray-200' : 'text-gray-700'}`}>{message}</p>}
+                        {!isEmojiSticker && message && <p className={`text-sm leading-relaxed ${isDarkMode ? 'text-white' : 'text-gray-700'}`}>{message}</p>}
                     </div>
                 )
 
             default: // text
-                return <p className={`text-sm leading-relaxed ${isDarkMode ? 'text-gray-100' : 'text-gray-800'}`}>{message}</p>
+                return <p className={`text-sm leading-relaxed ${user.id === socket.id ? 'text-white' : (isDarkMode ? 'text-white' : 'text-black')}`}>{message}</p>
         }
     }
 
